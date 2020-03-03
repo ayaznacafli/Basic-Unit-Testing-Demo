@@ -58,8 +58,6 @@ public class SpringbootMvcRestDemoApplicationTest {
         int id = 2;
         Post post = restTemplate.getForObject(ROOT_URL+"/posts/"+id, Post.class);
         assertNotNull(post);
-        Chapter 11 ■ Building REST APIs Using Spring Boot
-        144
         restTemplate.delete(ROOT_URL+"/posts/"+id);
         try {
             post = restTemplate.getForObject(ROOT_URL+"/posts/"+id, Post.class);
